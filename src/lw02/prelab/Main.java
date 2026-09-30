@@ -11,8 +11,8 @@ public class Main {
  
         LinkedList<String[]> transaksi = new LinkedList<>();
         LinkedList<String[]> customer = new LinkedList<>();
- 
-        Scanner sc = new Scanner(new File("src/lw02/prelab/Transactions.txt"));
+        
+        Scanner scanner = new Scanner (Main.class.getResourceAsStream("Transactions.txt"));
         while (sc.hasNextLine()) {
             String[] data = sc.nextLine().split(" ");
             transaksi.add(data);
