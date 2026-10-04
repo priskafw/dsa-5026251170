@@ -11,10 +11,9 @@ public class Main {
  
         LinkedList<String[]> transaksi = new LinkedList<>();
         LinkedList<String[]> customer = new LinkedList<>();
-        
         Scanner scanner = new Scanner (Main.class.getResourceAsStream("Transactions.txt"));
-        while (sc.hasNextLine()) {
-            String[] data = sc.nextLine().split(" ");
+        while (scanner.hasNextLine()) {
+            String[] data = scanner.nextLine().split(" ");
             transaksi.add(data);
  
             boolean sudahAda = false;
@@ -27,7 +26,7 @@ public class Main {
                 customer.add(new String[]{data[0], "0"});
             }
         }
-        sc.close();
+        scanner.close();
  
         Queue<String[]> antrian = new LinkedList<>(transaksi);
         Stack<String[]> gagal = new Stack<>();
