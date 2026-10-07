@@ -12,8 +12,7 @@ public class Main {
         System.out.println("===== Problem 1 =====");
  
         List<String> playlist = new LinkedList<>();
-        Scanner scanner1 = new Scanner(
-            Main.class.getResourceAsStream("playlist.txt")
+        Scanner scanner1 = new Scanner(Main.class.getResourceAsStream("playlist.txt")
         );
         while (scanner1.hasNextLine()) {
             String baris = scanner1.nextLine();
@@ -46,16 +45,13 @@ public class Main {
         System.out.println("===== Problem 2 =====");
 
         Set<String> peserta = new LinkedHashSet<>();
- 
         int jumlahDuplikat = 0;
-
         Scanner scanner2 = new Scanner(
             Main.class.getResourceAsStream("participants.txt")
         );
  
         while (scanner2.hasNextLine()) {
             String nama = scanner2.nextLine();
- 
             if (peserta.contains(nama)) {
                 jumlahDuplikat++;
             } else {
