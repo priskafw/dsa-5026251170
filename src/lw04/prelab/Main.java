@@ -2,21 +2,21 @@ package lw04.prelab;
 import java.util.Scanner;
 
 public class Main {
-            public static void insertionSort (int [] A, int passes){
-            for (int i = 1; i <= passes; i++) {
-                int key = A[i];
+            public static void insertionSort (int [] arr, int passes){
+            for (int i = 1; i <= passes && i < arr.length; i++) {
+                int key = arr[i];
                 int j = i - 1;
-                while (j >= 0 && A[j] < key) {
-                    A[j + 1] = A[j];
+                while (j >= 0 && arr[j] < key) {
+                    arr[j + 1] = arr[j];
                     j--;
                 }
-                A[j + 1] = key;
+                arr[j + 1] = key;
             }
         }
 
-        public static int sequentialSearch (int [] A, int target){
-            for (int i = 0; i < A.length; i++) {
-                if (A[i] == target) {
+        public static int sequentialSearch (int [] arr, int target){
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] == target) {
                     return i;
                 }
             }
