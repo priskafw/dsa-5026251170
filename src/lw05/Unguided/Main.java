@@ -173,7 +173,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(Main.class.getResourceAsStream("metro1.txt"));
+        Scanner sc = new Scanner(Main.class.getResourceAsStream("metro2.txt"));
 
         size = sc.nextInt();
         names = new String[size];
